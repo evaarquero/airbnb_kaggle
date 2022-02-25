@@ -1,0 +1,28 @@
+Prueba de Sample: 208.96
+Solo subiendo los 0's
+
+
+First Try (RFR) - 119.67: 
+- borrando todas las filas except [id', 'latitude', 'longitude', 'accommodates', 'bedrooms', 'price',
+       'number_of_reviews']
+- alguien me dijo que deberia ser regression (empollarmelo)
+
+
+Second try (RFR)- 140.8:
+- Mismo paso que en el caso anterior, pero convirtiendo los room_type y neighbour 
+en una nueva columna dummy categorizada, teniendo:
+['id', 'latitude', 'longitude', 'accommodates', 'bedrooms',
+       'number_of_reviews', 'Entire home/apt', 'Hotel room', 'Private room',
+       'Shared room', 'Bijlmer-Centrum', 'Bijlmer-Oost', 'Bos en Lommer',
+       'Buitenveldert - Zuidas', 'Centrum-Oost', 'Centrum-West',
+       'De Aker - Nieuw Sloten', 'De Baarsjes - Oud-West',
+       'De Pijp - Rivierenbuurt', 'Gaasperdam - Driemond',
+       'Geuzenveld - Slotermeer', 'IJburg - Zeeburgereiland', 'Noord-Oost',
+       'Noord-West', 'Oostelijk Havengebied - Indische Buurt', 'Osdorp',
+       'Oud-Noord', 'Oud-Oost', 'Slotervaart', 'Watergraafsmeer', 'Westerpark',
+       'Zuid']
+
+- Hay alguna posibilidad de encontrar algún modelo que funcione con estos datos? 
+
+Hacer testeo de correlación y dependencia. 
+Estudiar qué tipo de modelo va mejor con este tipo de datos. 
